@@ -1,0 +1,174 @@
+/* Umum */
+body {
+  font-family: 'Fredoka', sans-serif;
+  margin: 20px;
+  background-color: #d9edf8;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  background-image: "C:\Users\Lenovo\Downloads\cuaca.jpg" ;
+}
+
+/* Container utama */
+.container {
+  background-color: #ffffffab;
+  opacity: 100%;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Judul */
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Input dan tombol */
+input[type="text"] {
+  padding: 10px 15px;
+  font-size: 16px;
+  width: 80%;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  font-family: 'Fredoka', sans-serif;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"]:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #00000051;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Fredoka', sans-serif;
+  transition: all 0.5s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #000000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(1, 6, 16, 0.4);
+}
+
+.result-section {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.result-section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Kartu cuaca */
+.weather-card {
+  background-color:#3b82f6;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  width:20%;
+}
+
+.weather-card.hidden {
+  display: none;
+}
+
+/* Judul lokasi */
+.weather-card .location {
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Bagian ikon + suhu */
+.icon-section {
+  text-align: center;
+}
+
+.icon-section img {
+  width: 80px;
+  margin-bottom: 8px;
+}
+
+.temperature {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.description {
+  font-size: 16px;
+  text-transform: capitalize;
+  opacity: 0.9;
+}
+
+/* Detail kelembapan */
+.details {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.details .detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.details .detail img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+/* Peta */
+#map {
+  flex: 1;
+  height: 300px; /* ini WAJIB agar Leaflet tahu ukuran peta */
+  min-width: 300px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Grafik */
+#weatherChart {
+  margin-top: 30px;
+  background-color:  #ffffff00;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+}
+
+/* Umum: hidden */
+.hidden {
+  display: none !important;
+}
+
+.card-map-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch; /* ini bikin tinggi anak-anak flex sama semua */
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}

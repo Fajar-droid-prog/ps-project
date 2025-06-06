@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Cuaca</title>
+
+  <!-- Google Font Fredoka -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Chart.js & Leaflet -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+  <!-- Styling -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Weather Dashboard</h1>
+    <input type="text" id="cityInput" placeholder="Enter Your Location">
+    <button id="searchBtn">Search</button>
+
+    <!-- Bagian hasil pencarian -->
+    <div id="resultSection" class="result-section hidden">
+
+      <!-- Wrapper Flex untuk card + map -->
+      <div class="card-map-container">
+        <!-- Info Cuaca -->
+        <div id="weatherInfo" class="weather-card hidden">
+          <div class="location">
+            <h3 id="cityName"></h3>
+          </div>
+          <div class="icon-section">
+            <img id="weatherIcon" src="" alt="weather icon" />
+            <div class="temperature" id="temperature">--°C</div>
+            <div class="description" id="description">-</div>
+          </div>
+          <div class="details">
+            <div class="detail">
+              <span id="humidity">humidity,--%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Peta -->
+        <div id="map"></div>
+      </div>
+
+      <!-- Grafik -->
+      <canvas id="weatherChart"></canvas>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
